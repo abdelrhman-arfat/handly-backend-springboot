@@ -29,6 +29,7 @@ public class GlobalExceptionHandler {
         }
     }
 
+<<<<<<< HEAD
     public static class InternalServerErrorException extends RuntimeException {
         public InternalServerErrorException(String message) {
             super(message);
@@ -40,6 +41,8 @@ public class GlobalExceptionHandler {
     }
 
 
+=======
+>>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
     // Invalid login credentials
     public static class InvalidCredentialsException extends RuntimeException {
         public InvalidCredentialsException(String message) {
@@ -70,6 +73,7 @@ public class GlobalExceptionHandler {
             return ResponseHandler.error(ex.getMessage(), HttpStatus.NOT_FOUND);
         }
 
+<<<<<<< HEAD
         @ExceptionHandler(InternalServerErrorException.class)
         public ResponseEntity<Object> handleInternalServerError(InternalServerErrorException ex) {
             return ResponseHandler.error(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -80,6 +84,8 @@ public class GlobalExceptionHandler {
             return ResponseHandler.error(ex.getMessage(), HttpStatus.TOO_MANY_REQUESTS);
         }
 
+=======
+>>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
         @ExceptionHandler(DuplicateException.class)
         public ResponseEntity<Object> handleDuplicate(DuplicateException ex) {
             return ResponseHandler.error(ex.getMessage(), HttpStatus.CONFLICT);
