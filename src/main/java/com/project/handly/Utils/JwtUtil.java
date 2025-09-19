@@ -1,11 +1,8 @@
 package com.project.handly.Utils;
 
 import com.project.handly.Entities.User;
-<<<<<<< HEAD
 import com.project.handly.Exceptions.GlobalExceptionHandler;
 import com.project.handly.Services.UserService;
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -15,7 +12,6 @@ import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-<<<<<<< HEAD
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -23,33 +19,25 @@ import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
-=======
 import java.util.function.Function;
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 import org.springframework.stereotype.Component;
 
 @Component
 public class JwtUtil {
-<<<<<<< HEAD
     private final CacheManager cacheManager;
     private final UserService userService;
-=======
 
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
     private final String secretKey = System.getenv("JWT_SECRET_KEY");
     private final long jwtExpiration = Long.parseLong(
             System.getenv().getOrDefault("JWT_EXPIRATION_MS", "86400000") // default 24h
     );
 
-<<<<<<< HEAD
     public JwtUtil(CacheManager cacheManager , UserService userService) {
         this.cacheManager = cacheManager;
         this.userService = userService;
 
     }
 
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
     // ---------------- EXTRACT CLAIMS ----------------
     public Long extractUserId(String token) {
         return ((Number) extractAllClaims(token).get("userId")).longValue();
@@ -75,7 +63,6 @@ public class JwtUtil {
     private boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
-<<<<<<< HEAD
     // check if in the cache:
     public Optional<User> extractUserIfTokenInCache(String token) {
         // 1️⃣ تحقق إذا التوكن منتهي
@@ -113,20 +100,14 @@ public class JwtUtil {
 
     // ---------------- GENERATE TOKEN ----------------
     @CachePut(value = "user_tokens", key = "#user.id")
-=======
 
     // ---------------- GENERATE TOKEN ----------------
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
     public String generateToken(User user) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("userId", user.getId());
         return buildToken(claims);
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
     private String buildToken(Map<String, Object> claims) {
         return Jwts.builder()
                 .setClaims(claims)

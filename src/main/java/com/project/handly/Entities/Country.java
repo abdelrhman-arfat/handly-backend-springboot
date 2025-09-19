@@ -7,12 +7,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 @Entity
 @Table(name = "countries")
 @Getter
@@ -41,7 +38,6 @@ public class Country {
 
     @Column(name = "currency" , nullable = false)
     private String currency;
-<<<<<<< HEAD
 
 
     @Column(name = "is_deleted", nullable = false)
@@ -49,6 +45,4 @@ public class Country {
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.PERSIST)
     private List<User> users ;
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 }

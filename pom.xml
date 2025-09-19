@@ -23,12 +23,9 @@
     </properties>
 
     <dependencies>
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
         <!-- RabbitMQ -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -53,14 +50,11 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-<<<<<<< HEAD
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-oauth2-client</artifactId>
         </dependency>
 
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
         <!-- Web (REST APIs) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

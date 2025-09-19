@@ -2,12 +2,9 @@ package com.project.handly.Utils;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.project.handly.Entities.Country;
-<<<<<<< HEAD
 import com.project.handly.Entities.User;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,15 +23,12 @@ import java.util.Map;
 @Component
 public class ResponseHandler {
 
-<<<<<<< HEAD
     private static JwtUtil jwtUtil;
 
     public ResponseHandler(JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;
     }
 
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
     public static <T> ResponseEntity<Object> success(String message, T data, HttpStatus status) {
         Map<String, Object> response = new HashMap<>();
         response.put("success", true);
@@ -52,10 +46,6 @@ public class ResponseHandler {
     }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
     @Getter
     @Setter
     @NoArgsConstructor
@@ -85,7 +75,6 @@ public class ResponseHandler {
         );
     }
 
-<<<<<<< HEAD
     public static void addJwtCookie(HttpServletResponse response, User user) {
         String token = jwtUtil.generateToken(user);
         Cookie cookie = new Cookie("token", token);
@@ -96,7 +85,5 @@ public class ResponseHandler {
         response.addCookie(cookie);
     }
 
-=======
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 
 }

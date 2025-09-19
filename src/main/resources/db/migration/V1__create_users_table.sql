@@ -26,8 +26,8 @@ CREATE TABLE users (
                        role user_role DEFAULT 'user',
                        is_deleted BOOLEAN DEFAULT FALSE,
                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-=======
-CREATE TYPE employee_role AS ENUM ('ADMIN', 'EDITOR', 'READER');
+
+                           CREATE TYPE employee_role AS ENUM ('ADMIN', 'EDITOR', 'READER');
 CREATE TYPE post_type AS ENUM ('vedio', 'image' , 'text');
 CREATE TYPE user_role AS ENUM ('USER', 'ADMIN');
 
@@ -50,7 +50,6 @@ CREATE TABLE users (
     country_id INT REFERENCES countries(id),
     role user_role DEFAULT 'USER',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 ) ;
 
 CREATE INDEX idx_users_country_id ON users(country_id);
@@ -88,12 +87,10 @@ CREATE TABLE channels (
         name VARCHAR(100) NOT NULL UNIQUE,
         owner_id INT REFERENCES users(id),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 );
 
 CREATE INDEX idx_channels_owner_id ON channels(owner_id);
 
-<<<<<<< HEAD
 CREATE TABLE channel_platforms (
                                    id SERIAL PRIMARY KEY,
                                    channel_id INT REFERENCES channels(id),
@@ -141,7 +138,6 @@ CREATE TABLE packages_subscription (
                                        end_date DATE,
                                        is_deleted BOOLEAN DEFAULT FALSE,
                                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-=======
 
 CREATE TABLE channel_platforms (
     id SERIAL PRIMARY KEY,
@@ -189,12 +185,10 @@ CREATE TABLE packages_subscription (
     end_date DATE,
     active BOOLEAN DEFAULT TRUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 );
 
 CREATE INDEX idx_packages_sub_channel_id ON packages_subscription(channel_id);
 CREATE INDEX idx_packages_sub_package_id ON packages_subscription(package_id);
-<<<<<<< HEAD
 
 CREATE TABLE posts (
                        id SERIAL PRIMARY KEY,
@@ -206,7 +200,6 @@ CREATE TABLE posts (
                        post_url TEXT,
                        type post_type NOT NULL,
                        is_deleted BOOLEAN DEFAULT FALSE
-=======
 CREATE INDEX idx_packages_sub_active ON packages_subscription(active);
 
 
@@ -220,7 +213,6 @@ CREATE TABLE posts (
     content text not null,
     post_url TEXT ,
     type post_type NOT NULL
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 );
 
 CREATE INDEX idx_posts_channel_id ON posts(channel_id);
@@ -233,14 +225,11 @@ CREATE TABLE post_platforms (
                                 platform_post_id TEXT,
                                 status VARCHAR(50) DEFAULT 'pending',
                                 sent_at TIMESTAMP,
-<<<<<<< HEAD
                                 is_deleted BOOLEAN DEFAULT FALSE,
                                 PRIMARY KEY(post_id, channel_platform_id)
 );
 
-=======
                                 PRIMARY KEY(post_id, channel_platform_id)
 );
->>>>>>> 19f644cf08a16ec006c41ec5432fae67c3da07fb
 CREATE INDEX idx_post_platforms_post_id ON post_platforms(post_id);
 CREATE INDEX idx_post_platforms_channel_platform_id ON post_platforms(channel_platform_id);
