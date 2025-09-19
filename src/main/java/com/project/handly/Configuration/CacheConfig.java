@@ -33,7 +33,8 @@ public class CacheConfig {
         Map<String, RedisCacheConfiguration> cacheConfigurations = new HashMap<>();
 
         // Token cache -> 1 day
-        cacheConfigurations.put("tokens", defaultConfig.entryTtl(Duration.ofDays(1)));
+        cacheConfigurations.put("user_tokens", defaultConfig.entryTtl(Duration.ofDays(1)));
+        cacheConfigurations.put("platforms", defaultConfig.entryTtl(Duration.ofDays(1)));
 
         // Countries cache -> 1 hour
         cacheConfigurations.put("countries", defaultConfig.entryTtl(Duration.ofHours(1)));
