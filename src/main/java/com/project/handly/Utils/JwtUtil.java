@@ -100,8 +100,6 @@ public class JwtUtil {
 
     // ---------------- GENERATE TOKEN ----------------
     @CachePut(value = "user_tokens", key = "#user.id")
-
-    // ---------------- GENERATE TOKEN ----------------
     public String generateToken(User user) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("userId", user.getId());
