@@ -20,9 +20,6 @@ INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('م
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('الصومال','somalia','SO','SOS','+252') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('جيبوتي','djibouti','DJ','DJF','+253') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('جزر القمر','comoros','KM','KMF','+269') ON CONFLICT (name_en) DO NOTHING;
-
-
--- Europe
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('فرنسا','france','FR','EUR','+33') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('ألمانيا','germany','DE','EUR','+49') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('إيطاليا','italy','IT','EUR','+39') ON CONFLICT (name_en) DO NOTHING;
@@ -33,7 +30,6 @@ INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('ا
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('السويد','sweden','SE','SEK','+46') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('النرويج','norway','NO','NOK','+47') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('سويسرا','switzerland','CH','CHF','+41') ON CONFLICT (name_en) DO NOTHING;
-
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('الصين','china','CN','CNY','+86') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('الهند','india','IN','INR','+91') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('اليابان','japan','JP','JPY','+81') ON CONFLICT (name_en) DO NOTHING;
@@ -44,7 +40,6 @@ INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('ب
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('ماليزيا','malaysia','MY','MYR','+60') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('الفلبين','philippines','PH','PHP','+63') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('تركيا','turkey','TR','TRY','+90') ON CONFLICT (name_en) DO NOTHING;
-
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('الولايات المتحدة','united states','US','USD','+1') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('البرازيل','brazil','BR','BRL','+55') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('كندا','canada','CA','CAD','+1') ON CONFLICT (name_en) DO NOTHING;
@@ -52,7 +47,29 @@ INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('ا
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('المكسيك','mexico','MX','MXN','+52') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('تشيلي','chile','CL','CLP','+56') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('كولومبيا','colombia','CO','COP','+57') ON CONFLICT (name_en) DO NOTHING;
-
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('أستراليا','australia','AU','AUD','+61') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('نيوزيلندا','new zealand','NZ','NZD','+64') ON CONFLICT (name_en) DO NOTHING;
 INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('فيجي','fiji','FJ','FJD','+679') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('نيجيريا','nigeria','NG','NGN','+234') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('جنوب أفريقيا','south africa','ZA','ZAR','+27') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('إثيوبيا','ethiopia','ET','ETB','+251') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('غانا','ghana','GH','GHS','+233') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('الكونغو الديمقراطية','democratic republic of the congo','CD','CDF','+243') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('هولندا','netherlands','NL','EUR','+31') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('بلجيكا','belgium','BE','EUR','+32') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('البرتغال','portugal','PT','EUR','+351') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('بولندا','poland','PL','PLN','+48') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('أوكرانيا','ukraine','UA','UAH','+380') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('سريلانكا','sri lanka','LK','LKR','+94') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('تايلاند','thailand','TH','THB','+66') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('سنغافورة','singapore','SG','SGD','+65') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('فيتنام','vietnam','VN','VND','+84') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('إيران','iran','IR','IRR','+98') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('كوبا','cuba','CU','CUP','+53') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('جامايكا','jamaica','JM','JMD','+1-876') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('هايتي','haiti','HT','HTG','+509') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('بيرو','peru','PE','PEN','+51') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('فنزويلا','venezuela','VE','VES','+58') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('الإكوادور','ecuador','EC','USD','+593') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('بابوا غينيا الجديدة','papua new guinea','PG','PGK','+675') ON CONFLICT (name_en) DO NOTHING;
+INSERT INTO countries (name_ar, name_en, code, currency, phone_code) VALUES ('ساموا','samoa','WS','WST','+685') ON CONFLICT (name_en) DO NOTHING;
