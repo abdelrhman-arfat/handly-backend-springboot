@@ -54,7 +54,6 @@ public class User {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "country_id", nullable = false)
-//    @JsonProperty("country")
     @JsonIgnore
     private Country country;
 

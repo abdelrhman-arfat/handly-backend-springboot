@@ -1,5 +1,6 @@
 package com.project.handly.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -44,5 +45,6 @@ public class Country {
     private Boolean isDeleted = false;
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.PERSIST)
+    @JsonIgnore
     private List<User> users ;
 }
