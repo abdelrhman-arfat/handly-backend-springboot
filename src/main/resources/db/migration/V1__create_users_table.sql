@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CREATE TYPE employee_role AS ENUM ('admin', 'editor', 'reader');
 CREATE TYPE post_type AS ENUM ('video', 'image' , 'text');
 CREATE TYPE user_role AS ENUM ('user', 'admin');
